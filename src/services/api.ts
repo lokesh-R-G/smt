@@ -1,6 +1,7 @@
 import { Product } from '../types';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api/v1';
+const API_ROOT = (import.meta.env.VITE_API_URL || 'https://smt-0951.onrender.com').replace(/\/+$/, '');
+const API_BASE_URL = `${API_ROOT}/api/v1`;
 const AUTH_EXPIRED_EVENT = 'auth:expired';
 
 export class ApiError extends Error {
